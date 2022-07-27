@@ -14,10 +14,8 @@ def main():
                 if i == 0 or j == 0 or i == dim[0]-1 or j == dim[1]-1 :
                     imageB[i][j] = '.'
                 else:
-                    if imageA[i+1][j] == '#' and imageA[i-1][j] == '#' and \
-                        imageA[i][j+1] == '#' and imageA[i][j-1] == '#' :
-                        imageB[i][j] = '#'
-                    else:
+                    if imageA[i+1][j] != '#' or imageA[i-1][j] != '#' or \
+                        imageA[i][j+1] != '#' or imageA[i][j-1] != '#' :
                         imageB[i][j] = '.'
         for i in range(dim[0]):
             for j in range(dim[1]):

@@ -11,8 +11,8 @@ def main():
         sums = [0] * ( n * 2 + 2 )
         for i in range(n):
             sums[i] = sum(carre[i])
-        for i in range(n):
-            sums[n+i] = sum([carre[i][j] for j in range(n)])
+        for j in range(n):
+            sums[n+j] = sum([carre[i][j] for i in range(n)])
         sums[2*n] = sum([carre[k][k] for k in range(n)])
         sums[2*n+1] = sum([carre[-k-1][k] for k in range(n)])
 
