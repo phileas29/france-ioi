@@ -4,12 +4,10 @@
 import sys, math
 
 def main():
-    n = int(sys.stdin.readline())
-
-    if n== 0:
-        print(0)
-    else:
-        print("".join(map(str,[ n//2**i%2 for i in range(int(math.log(n,2)+1)) ][::-1])))
+    N, n = [ int(e) for e in sys.stdin.readline().split(' ') ]
+    Ni = [ int(e) for e in sys.stdin.readline().split(' ') ]
+    
+    print(sum([ Ni[i] * N ** (n-1-i) for i in range(n) ]))
 
 if __name__ == '__main__':
     main()
